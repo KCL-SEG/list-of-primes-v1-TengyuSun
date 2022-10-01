@@ -18,6 +18,3 @@ def primes(number_of_primes):
         num+=1
 
     return list
-
-if __name__ == "main":
-    print(primes(100))
