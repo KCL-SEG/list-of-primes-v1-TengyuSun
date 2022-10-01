@@ -1,14 +1,23 @@
 """List of prime numbers generator."""
 """ENTER YOUR SOLUTION HERE!"""
 
+
 def primes(number_of_primes):
     list = []
+    count = 0
     num = 2
 
-    for i in range(num, number_of_primes):
-        for j in range(num, i):
-            if i%j == 0:
+    while count < number_of_primes:
+
+        for i in range(2, (num//2)+1):
+            if num%i == 0:
                 break
             else:
-                list.append(i)
+                list.append(num);
+                count +=1
+        num+=1
+
     return list
+
+if __name__ == "main":
+    print(primes(100))
